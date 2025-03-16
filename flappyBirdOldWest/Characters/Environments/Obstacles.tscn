@@ -1,12 +1,22 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Characters/Environments/Walls.tscn" type="PackedScene" id=1]
 
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 21.5, 88.5 )
+
 [node name="Obstacles" type="Node2D"]
+position = Vector2( 0, 427 )
 
 [node name="Walls" parent="." instance=ExtResource( 1 )]
-position = Vector2( 0, 214 )
+position = Vector2( 64, 79 )
 
 [node name="Walls2" parent="." instance=ExtResource( 1 )]
-position = Vector2( -34, -233 )
+position = Vector2( 0, -517 )
 rotation = 3.14159
+
+[node name="ScoreArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScoreArea"]
+position = Vector2( 36.5, -224 )
+shape = SubResource( 1 )
