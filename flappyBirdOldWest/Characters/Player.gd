@@ -1,4 +1,5 @@
 extends RigidBody2D
+class_name  Player
 
 var flap_force = -315
 var MAX_ROTATION_DEGREES = -30
